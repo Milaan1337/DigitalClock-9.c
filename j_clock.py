@@ -7,9 +7,9 @@ class Clock:
     _secondChangeEvent = 0
     _minuteChangeEvent = 0
     _scr: TurtleScreen
-    _dsp_min: int = _t.min
-    _dsp_sec: int = _t.second
-    _dsp_hour: int = _t.hour
+    _dsp_min: int = -1
+    _dsp_sec: int = -1
+    _dsp_hour: int = -1
     frequency: int = 100
 
     def __init__(self, scr: TurtleScreen):
@@ -54,20 +54,27 @@ class Clock:
         fun()
 
     def _handleEvents(self):
-        self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
         self._t = datetime.now()
-        if self._dsp_sec != self._t.second:
-            self._dsp_sec = self._t.second
+
+        if self._dsp_sec != self.sec():
+            print("SecondChange")
+            self._dsp_sec = self.sec()
             if self._secondChangeEvent != 0:
                 self._secondChangeEvent()
-        if self._dsp_min != self._t.min:
-            self._dsp_min = self._t.min
+
+        if self._dsp_min != self.min():
+            print("MinuteChange")
+            self._dsp_min = self.min()
             if self._minuteChangeEvent != 0:
                 self._minuteChangeEvent()
-        if self._dsp_hour != self._t.hour:
-            self._dsp_hour = self._t.hour
+
+        if self._dsp_hour != self.hour24():
+            print("HourChange")
+            self._dsp_hour = self.hour24()
             if self._hourChangeEvent != 0:
                 self._hourChangeEvent()
+
+        self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
 
     def leftNumber(self, num: int) -> int:
         return (num // 10) % 10
