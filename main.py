@@ -25,7 +25,7 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(60)
         self.t.left(45)
-        self.t.forward(30)
+        self.t.forward(20)
         self.t.end_fill()
 
     def asd2(self):
@@ -40,6 +40,8 @@ class Kattintgato:
 
     def ketto(self):
         self.asd()
+        self.t.right(90)
+        self.asd()
 
 
 
@@ -47,7 +49,7 @@ class Kattintgato:
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.asd()
+        self.ketto()
         self.t._delay(0)
         self.t2.speed(0)
         self.t2._delay(0)
