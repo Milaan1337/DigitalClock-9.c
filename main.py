@@ -49,17 +49,38 @@ class Kattintgato:
 
     def ketto(self):
         self.asd()
-        self.t.right(90)
+        for i in range(2):
+            self.t.right(135)
+            self.t.penup()
+            self.t.forward(15)
+            self.t.pendown()
+            self.asd()
+        for i in range(2):
+            self.t.left(45)
+            self.t.penup()
+            self.t.forward(15)
+            self.asd()
+
+    def harom(self):
         self.asd()
+        for i in range(2):
+            self.t.right(135)
+            self.t.penup()
+            self.t.forward(15)
+            self.t.pendown()
+            self.asd()
+        for i in range(2):
+            self.t.right(45)
+            self.t.penup()
+            self.t.forward(15)
+            self.asd()
 
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.egy()
+        self.ketto()
 
         self.t._delay(0)
-        self.t2.speed(0)
-        self.t2._delay(0)
         self.t.speed(0)
 
         self.scr.mainloop()
