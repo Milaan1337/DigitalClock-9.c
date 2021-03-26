@@ -11,13 +11,21 @@ class Kattintgato:
     def asd(self):
         self.t.fillcolor("green")
         self.t.begin_fill()
-        self.t.forward(100)
+        self.t.penup()
+        self.t.forward(80)
+        self.t.pendown()
         self.t.left(135)
-        self.t.forward(30)
+        self.t.forward(20)
         self.t.left(45)
         self.t.forward(60)
         self.t.left(45)
-        self.t.forward(29)
+        self.t.forward(20)
+        self.t.left(90)
+        self.t.forward(20)
+        self.t.left(45)
+        self.t.forward(60)
+        self.t.left(45)
+        self.t.forward(30)
         self.t.end_fill()
 
     def asd2(self):
@@ -28,6 +36,9 @@ class Kattintgato:
 
     def asd3(self):
         self.t.right(135)
+        self.asd()
+
+    def ketto(self):
         self.asd()
 
 
