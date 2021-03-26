@@ -19,11 +19,6 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(29)
         self.t.end_fill()
-        for i in range(3):
-            self.t.left(135)
-            self.t.forward(100)
-            self.t.left(90)
-            self.asd()
 
     def asd2(self):
         for i in range(3):
@@ -35,10 +30,12 @@ class Kattintgato:
         self.t.right(135)
         self.asd()
 
+
+
+
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.asd()
         self.asd()
         self.t._delay(0)
         self.t2.speed(0)
