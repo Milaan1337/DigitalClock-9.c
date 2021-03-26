@@ -1,16 +1,49 @@
-# This is a sample Python script.
+from turtle import *
+from j_clock import Clock
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Kattintgato:
+
+    scr = Screen()
+    t = Turtle()
+    t2 = Turtle()
+    c = Clock(scr)
+
+    def asd(self):
+        self.t.fillcolor("green")
+        self.t.begin_fill()
+        self.t.forward(100)
+        self.t.left(135)
+        self.t.forward(30)
+        self.t.left(45)
+        self.t.forward(60)
+        self.t.left(45)
+        self.t.forward(29)
+        self.t.end_fill()
+
+    def asd2(self):
+        for i in range(3):
+            self.t.left(135)
+            self.t.forward(100)
+            self.t.left(90)
+            self.asd()
+
+    def asd3(self):
+        self.t.right(135)
+        self.asd()
+
+    def __init__(self):
+        self.t.fillcolor("yellow")
+        self.t2.fillcolor("yellow")
+        self.asd()
+        self.asd2()
+        self.asd3()
+        self.asd2()
+        self.t._delay(0)
+        self.t2.speed(0)
+        self.t2._delay(0)
+        self.t.speed(0)
+
+        self.scr.mainloop()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Kattintgato()

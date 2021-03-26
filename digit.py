@@ -1,6 +1,9 @@
 from turtle import *
 from turtle import Screen
 from j_clock import Clock
+scr = Screen()
+c = Clock(scr)
+t = Turtle()
 
 class Digit:
 
