@@ -38,18 +38,25 @@ class Kattintgato:
         self.t.right(135)
         self.asd()
 
+    def egy(self):
+        self.t.left(90)
+        self.asd()
+        self.t.right(45)
+        self.t.penup()
+        self.t.forward(15)
+        self.t.pendown()
+        self.asd()
+
     def ketto(self):
         self.asd()
         self.t.right(90)
         self.asd()
 
-
-
-
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.ketto()
+        self.egy()
+
         self.t._delay(0)
         self.t2.speed(0)
         self.t2._delay(0)
