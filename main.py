@@ -152,7 +152,7 @@ class Kattintgato:
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.c.setOnSecondChangeListener(self.secondleft)
+        self.nulla()
 
         self.t._delay(0)
         self.t.speed(100000000000)
