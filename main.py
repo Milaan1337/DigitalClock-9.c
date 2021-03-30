@@ -42,7 +42,6 @@ class Kattintgato:
         x0 = self.t.xcor()
         y0 = self.t.ycor()
         heading0 = self.t.heading()
-        self.t.goto(200, 100)
         self.t.left(90)
         self.asd()
         self.t.penup()
@@ -82,7 +81,6 @@ class Kattintgato:
         x = self.t.xcor()
         y = self.t.ycor()
         heading = self.t.heading()
-        self.t.goto(200, 100)
         self.t.left(90)
         self.asd()
         self.t.right(45)
@@ -99,7 +97,6 @@ class Kattintgato:
         x2 = self.t.xcor()
         y2 = self.t.ycor()
         heading2 = self.t.heading()
-        self.t.goto(200, 100)
         self.asd()
         for i in range(2):
             self.t.right(135)
@@ -121,20 +118,23 @@ class Kattintgato:
         x3 = self.t.xcor()
         y3 = self.t.ycor()
         heading3 = self.t.heading()
-        self.t.goto(200, 100)
         self.asd()
         self.t.right(135)
         self.t.penup()
         self.t.forward(15)
         self.t.pendown()
         self.asd()
-
         self.t.right(45)
         self.t.penup()
         self.t.forward(15)
         self.asd()
+        self.t.goto(x3,y3)
+        self.t.setheading(heading3)
 
     def negy(self):
+        x4 = self.t.xcor()
+        y4 = self.t.ycor()
+        heading4 = self.t.heading()
         self.t.left(90)
         self.asd()
         self.t.right(45)
@@ -156,29 +156,10 @@ class Kattintgato:
         self.t.right(90)
         self.t.forward(10)
         self.asd()
-
-    def ot(self):
-        self.t.left(90)
-        self.asd()
-        self.t.right(45)
         self.t.penup()
-        self.t.forward(10)
-        self.t.left(90)
-        self.t.forward(10)
+        self.t.goto(x4,y4)
         self.t.pendown()
-        self.asd()
-        self.t.right(135)
-        self.t.penup()
-        self.t.forward(10)
-        self.t.forward(10)
-        self.t.pendown()
-        self.asd()
-        self.t.penup()
-        self.t.goto(x3,y3)
-        self.t.pendown()
-        self.t.setheading(heading3)
-        self.t.right(45)
-        self.t.forward()
+        self.t.setheading(heading4)
 
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
@@ -193,14 +174,17 @@ class Kattintgato:
         if self.c.leftNumber(self.c.sec()) == 3:
             self.harom()
             self.t.clear()
+        if self.c.leftNumber(self.c.sec()) == 4:
+            self.negy()
+            self.t.clear()
 
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.c.setOnSecondChangeListener(self.secondleft)
+        self.harom()
 
         self.t._delay(0)
-        self.t.speed(100000000000)
+        self.t.speed(0)
 
         self.scr.mainloop()
 
