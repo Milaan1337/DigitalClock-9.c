@@ -38,6 +38,38 @@ class Kattintgato:
         self.t.right(135)
         self.asd()
 
+    def nulla(self):
+        self.t.left(90)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(10)
+        self.t.left(90)
+        self.t.forward(10)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(2)
+        self.t.left(90)
+        self.t.forward(18)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(10)
+        self.t.left(90)
+        self.t.forward(10)
+        self.asd()
+
+
+
     def egy(self):
         self.t.left(90)
         self.asd()
@@ -75,13 +107,37 @@ class Kattintgato:
             self.t.forward(15)
             self.asd()
 
+    def negy(self):
+        self.t.left(90)
+        self.asd()
+        self.t.right(45)
+        self.t.penup()
+        self.t.forward(10)
+        self.t.left(90)
+        self.t.forward(10)
+        self.t.pendown()
+        self.asd()
+        self.t.right(135)
+        self.t.penup()
+        self.t.forward(10)
+        self.t.forward(10)
+        self.t.pendown()
+        self.asd()
+        self.t.right(135)
+        self.t.penup()
+        self.t.forward(90)
+        self.t.right(90)
+        self.t.forward(10)
+        self.asd()
+
+
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.ketto()
+        self.nulla()
 
         self.t._delay(0)
-        self.t.speed(0)
+        self.t.speed(100000000000)
 
         self.scr.mainloop()
 
