@@ -302,6 +302,9 @@ class Kattintgato:
         if self.c.leftNumber(self.c.sec()) == 5:
             self.ot()
             self.t.clear()
+        if self.c.leftNumber(self.c.sec()) == 6:
+            self.hat()
+            self.t.clear()
         if self.c.leftNumber(self.c.sec()) == 7:
             self.het()
             self.t.clear()
