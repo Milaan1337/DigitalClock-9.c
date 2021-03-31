@@ -256,6 +256,32 @@ class Kattintgato:
         self.t.pendown()
         self.t.setheading(heading7)
 
+    def nyolc(self):
+        x8 = self.t.xcor()
+        y8 = self.t.ycor()
+        heading8 = self.t.heading()
+        self.asd()
+        for i in range(3):
+            self.t.penup()
+            self.t.left(45)
+            self.t.forward(15)
+            self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.left(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.left(45)
+        self.t.forward(12)
+        self.asd()
+        self.t.penup()
+        self.t.goto(x8,y8)
+        self.t.pendown()
+        self.t.setheading(heading8)
 
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
@@ -279,11 +305,14 @@ class Kattintgato:
         if self.c.leftNumber(self.c.sec()) == 7:
             self.het()
             self.t.clear()
+        if self.c.leftNumber(self.c.sec()) == 8:
+            self.nyolc()
+            self.t.clear()
 
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.hat()
+        self.het()
 
         self.t._delay(0)
         self.t.speed(0)
