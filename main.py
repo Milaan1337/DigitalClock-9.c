@@ -240,7 +240,7 @@ class Kattintgato:
             self.ot()
             self.t.clear()
         if self.c.leftNumber(self.c.sec()) == 7:
-            self.ot()
+            self.het()
             self.t.clear()
 
     def __init__(self):
