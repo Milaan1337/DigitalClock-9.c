@@ -124,24 +124,11 @@ class Kattintgato:
         self.t.forward(15)
         self.t.pendown()
         self.asd()
+
         self.t.right(45)
         self.t.penup()
         self.t.forward(15)
         self.asd()
-        self.t.left(225)
-        self.t.penup()
-        self.t.forward(15)
-        self.asd()
-        self.t.right(130)
-        self.t.penup()
-        self.t.forward(90)
-        self.t.right(95)
-        self.t.penup()
-        self.t.forward(16)
-        self.asd()
-        self.t.penup()
-        self.t.goto(x3, y3)
-        self.t.setheading(heading3)
 
     def negy(self):
         x4 = self.t.xcor()
@@ -283,6 +270,33 @@ class Kattintgato:
         self.t.pendown()
         self.t.setheading(heading8)
 
+    def kilenc(self):
+        self.t.left(180)
+        self.asd()
+        self.t.penup()
+        self.t.left(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.left(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.left(90)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.forward(-110)
+        self.t.right(180)
+        self.asd()
+        self.t.penup()
+        self.t.right(45)
+        self.t.right(90)
+        self.t.forward(15)
+        self.asd()
+
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
             self.nulla()
@@ -311,11 +325,14 @@ class Kattintgato:
         if self.c.leftNumber(self.c.sec()) == 8:
             self.nyolc()
             self.t.clear()
+        if self.c.leftNumber(self.c.sec()) == 9:
+            self.kilenc()
+            self.t.clear()
 
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.het()
+        self.kilenc()
 
         self.t._delay(0)
         self.t.speed(0)
