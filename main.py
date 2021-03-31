@@ -173,6 +173,34 @@ class Kattintgato:
         self.t.pendown()
         self.t.setheading(heading4)
 
+    def ot(self):
+        x5 = self.t.xcor()
+        y5 = self.t.ycor()
+        heading5 = self.t.heading()
+        self.t.left(180)
+        self.asd()
+        self.t.penup()
+        self.t.left(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.left(45)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.right(135)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.right(135)
+        self.t.forward(15)
+        self.asd()
+        self.t.penup()
+        self.t.goto(x5,y5)
+        self.t.pendown()
+        self.t.setheading(heading5)
+
+
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
             self.nulla()
@@ -189,11 +217,14 @@ class Kattintgato:
         if self.c.leftNumber(self.c.sec()) == 4:
             self.negy()
             self.t.clear()
+        if self.c.leftNumber(self.c.sec()) == 5:
+            self.ot()
+            self.t.clear()
 
     def __init__(self):
         self.t.fillcolor("yellow")
         self.t2.fillcolor("yellow")
-        self.harom()
+        self.ot()
 
         self.t._delay(0)
         self.t.speed(0)
