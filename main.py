@@ -5,7 +5,6 @@ class Kattintgato:
 
     scr = Screen()
     t = Turtle()
-    t2 = Turtle()
     c = Clock(scr)
 
     def asd(self):
@@ -124,11 +123,24 @@ class Kattintgato:
         self.t.forward(15)
         self.t.pendown()
         self.asd()
-
         self.t.right(45)
         self.t.penup()
         self.t.forward(15)
         self.asd()
+        self.t.left(225)
+        self.t.penup()
+        self.t.forward(15)
+        self.asd()
+        self.t.right(130)
+        self.t.penup()
+        self.t.forward(90)
+        self.t.right(95)
+        self.t.penup()
+        self.t.forward(16)
+        self.asd()
+        self.t.penup()
+        self.t.goto(x3, y3)
+        self.t.setheading(heading3)
 
     def negy(self):
         x4 = self.t.xcor()
@@ -299,43 +311,24 @@ class Kattintgato:
 
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
+            self.t.clear()
             self.nulla()
-            self.t.clear()
         if self.c.leftNumber(self.c.sec()) == 1:
+            self.t.clear()
             self.egy()
-            self.t.clear()
         if self.c.leftNumber(self.c.sec()) == 2:
+            self.t.clear()
             self.ketto()
-            self.t.clear()
         if self.c.leftNumber(self.c.sec()) == 3:
+            self.t.clear()
             self.harom()
-            self.t.clear()
-        if self.c.leftNumber(self.c.sec()) == 4:
-            self.negy()
-            self.t.clear()
-        if self.c.leftNumber(self.c.sec()) == 5:
-            self.ot()
-            self.t.clear()
-        if self.c.leftNumber(self.c.sec()) == 6:
-            self.hat()
-            self.t.clear()
-        if self.c.leftNumber(self.c.sec()) == 7:
-            self.het()
-            self.t.clear()
-        if self.c.leftNumber(self.c.sec()) == 8:
-            self.nyolc()
-            self.t.clear()
-        if self.c.leftNumber(self.c.sec()) == 9:
-            self.kilenc()
-            self.t.clear()
 
     def __init__(self):
         self.t.fillcolor("yellow")
-        self.t2.fillcolor("yellow")
-        self.secondleft()
 
         self.t._delay(0)
         self.t.speed(0)
+        self.c.setOnSecondChangeListener(self.secondleft)
 
         self.scr.mainloop()
 
