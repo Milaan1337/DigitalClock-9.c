@@ -168,7 +168,7 @@ class Kattintgato:
         self.t.forward(10)
         self.asd()
         self.t.penup()
-        self.t.goto(x4,y4)
+        self.t.goto(x4, y4)
         self.t.pendown()
         self.t.setheading(heading4)
 
@@ -195,7 +195,7 @@ class Kattintgato:
         self.t.forward(15)
         self.asd()
         self.t.penup()
-        self.t.goto(x5,y5)
+        self.t.goto(x5, y5)
         self.t.pendown()
         self.t.setheading(heading5)
 
@@ -207,7 +207,6 @@ class Kattintgato:
         self.t.penup()
         self.t.goto(x6, y6)
         self.t.pendown()
-        self.t.setheading(heading6)
         self.t.right(90)
         self.t.penup()
         self.t.forward(20)
@@ -251,7 +250,7 @@ class Kattintgato:
         self.t.forward(15)
         self.asd()
         self.t.penup()
-        self.t.goto(x7,y7)
+        self.t.goto(x7, y7)
         self.t.pendown()
         self.t.setheading(heading7)
 
@@ -278,11 +277,14 @@ class Kattintgato:
         self.t.forward(12)
         self.asd()
         self.t.penup()
-        self.t.goto(x8,y8)
+        self.t.goto(x8, y8)
         self.t.pendown()
         self.t.setheading(heading8)
 
     def kilenc(self):
+        x9 = self.t.xcor()
+        y9 = self.t.ycor()
+        heading9 = self.t.heading()
         self.t.left(180)
         self.asd()
         self.t.penup()
@@ -308,6 +310,9 @@ class Kattintgato:
         self.t.right(90)
         self.t.forward(15)
         self.asd()
+        self.t.goto(x9, y9)
+        self.t.pendown()
+        self.t.setheading(heading9)
 
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
@@ -322,6 +327,24 @@ class Kattintgato:
         if self.c.leftNumber(self.c.sec()) == 3:
             self.t.clear()
             self.harom()
+        if self.c.leftNumber(self.c.sec()) == 4:
+            self.t.clear()
+            self.negy()
+        if self.c.leftNumber(self.c.sec()) == 5:
+            self.t.clear()
+            self.ot()
+        if self.c.leftNumber(self.c.sec()) == 6:
+            self.t.clear()
+            self.hat()
+        if self.c.leftNumber(self.c.sec()) == 7:
+            self.t.clear()
+            self.het()
+        if self.c.leftNumber(self.c.sec()) == 8:
+            self.t.clear()
+            self.nyolc()
+        if self.c.leftNumber(self.c.sec()) == 9:
+            self.t.clear()
+            self.kilenc()
 
     def __init__(self):
         self.t.fillcolor("yellow")
