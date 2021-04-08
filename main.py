@@ -62,7 +62,7 @@ class Kattintgato:
         x0 = self.t.xcor()
         y0 = self.t.ycor()
         heading0 = self.t.heading()
-        self.t.left(90)
+        self.t.right(90)
         self.asd()
         self.t.penup()
         self.t.right(45)
@@ -721,8 +721,9 @@ class Kattintgato:
 
     def __init__(self):
         self.t.fillcolor("yellow")
-        self.t._delay(10)
-        self.t.speed(10)
+        self.t._delay(0)
+        self.t.speed(0)
+        self.c.setOnSecondChangeListener(self.second)
 
 
         self.scr.mainloop()
