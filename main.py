@@ -13,7 +13,7 @@ class Kattintgato:
         yA = self.t.ycor()
         rotA = self.t.heading()
         self.t.penup()
-        self.t.forward(-9)
+        self.t.forward(-7)
         self.t.right(90)
         self.t.forward(5)
         self.t.left(90)
@@ -97,8 +97,9 @@ class Kattintgato:
     def asdD(self):
         self.t.penup()
         self.t.forward(80)
+        self.t.forward(5)
         self.t.setheading(180)
-        self.t.forward(20)
+        self.t.forward(15)
         self.t.pendown()
         xD = self.t.xcor()
         yD = self.t.ycor()
@@ -126,9 +127,9 @@ class Kattintgato:
     def asdE(self):
         self.t.penup()
         self.t.forward(80)
-        self.t.forward(8)
+        self.t.forward(5)
         self.t.setheading(90)
-        self.t.forward(12)
+        self.t.forward(15)
         self.t.pendown()
         xE = self.t.xcor()
         yE = self.t.ycor()
@@ -155,9 +156,10 @@ class Kattintgato:
 
     def asdF(self):
         self.t.penup()
+        self.t.forward(20)
         self.t.forward(80)
         self.t.setheading(90)
-        self.t.forward(20)
+        self.t.forward(-3)
         self.t.pendown()
         xF = self.t.xcor()
         yF = self.t.ycor()
@@ -185,7 +187,7 @@ class Kattintgato:
     def asdG(self):
         self.t.penup()
         self.t.setheading(0)
-        self.t.forward(-2)
+        self.t.forward(-5)
         self.t.setheading(-90)
         self.t.forward(15)
         self.t.setheading(0)
