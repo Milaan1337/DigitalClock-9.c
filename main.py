@@ -537,7 +537,7 @@ class Kattintgato:
         self.t.fillcolor("green")
         self.t._delay(0)
         self.t.speed(0)
-        self.kilencc()
+        self.second()
         #self.asd()
         #self.asdB()
         #self.asdC()
