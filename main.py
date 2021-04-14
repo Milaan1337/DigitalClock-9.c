@@ -244,7 +244,6 @@ class Kattintgato:
         self.t.pendown()
         self.t.setheading(rotF)
 
-
     def asd2(self):
         self.t2.fillcolor("green")
         self.t2.begin_fill()
@@ -264,16 +263,6 @@ class Kattintgato:
         self.t2.left(45)
         self.t2.forward(20)
         self.t2.end_fill()
-
-    #def asd2(self):
-        #for i in range(3):
-            #self.t.left(135)
-            #self.t.forward(100)
-            #self.t.left(90)
-
-    #def asd3(self):
-        #self.t.right(135)
-        #self.asd()
 
     def nulla(self):
         self.asd(True)
@@ -430,33 +419,63 @@ class Kattintgato:
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(50, 0)
+            self.t.pendown()
             self.nulla()
         if self.c.leftNumber(self.c.sec()) == 1:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.egy()
         if self.c.leftNumber(self.c.sec()) == 2:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.ketto()
         if self.c.leftNumber(self.c.sec()) == 3:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.harom()
         if self.c.leftNumber(self.c.sec()) == 4:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.negy()
         if self.c.leftNumber(self.c.sec()) == 5:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.ot()
         if self.c.leftNumber(self.c.sec()) == 6:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.hat()
         if self.c.leftNumber(self.c.sec()) == 7:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.het()
         if self.c.leftNumber(self.c.sec()) == 8:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.nyolc()
         if self.c.leftNumber(self.c.sec()) == 9:
             self.t.clear()
+            self.t.penup()
+            self.t.goto(0, 0)
+            self.t.pendown()
             self.kilenc()
 
     def second(self):
@@ -467,8 +486,8 @@ class Kattintgato:
         self.t.fillcolor("green")
         self.t._delay(0)
         self.t.speed(0)
-        self.kilenc()
-        #self.c.setOnSecondChangeListener(self.second)
+        #self.kilenc()
+        self.c.setOnSecondChangeListener(self.second)
         #self.asd()
         #self.asdB()
         #self.asdC()
