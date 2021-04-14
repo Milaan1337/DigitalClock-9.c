@@ -8,7 +8,7 @@ class Kattintgato:
     t2 = Turtle()
     c = Clock(scr)
 
-    def asd(self):
+    def asd(self, fill:bool):
         xA = self.t.xcor()
         yA = self.t.ycor()
         rotA = self.t.heading()
@@ -19,6 +19,8 @@ class Kattintgato:
         self.t.left(90)
         self.t.forward(80)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         self.t.left(135)
         self.t.forward(20)
         self.t.left(45)
@@ -31,17 +33,21 @@ class Kattintgato:
         self.t.forward(60)
         self.t.left(45)
         self.t.forward(20)
+        if fill:
+            self.t.end_fill()
         self.t.penup()
         self.t.goto(xA, yA)
         self.t.setheading(rotA)
         self.t.pendown()
 
-    def asdB(self):
+    def asdB(self, fill:bool):
         self.t.penup()
         self.t.forward(80)
         self.t.setheading(-90)
         self.t.forward(20)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         xB = self.t.xcor()
         yB = self.t.ycor()
         rotB = self.t.heading()
@@ -61,16 +67,20 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(20)
         self.t.penup()
+        if fill:
+            self.t.end_fill()
         self.t.goto(xB, yB)
         self.t.pendown()
         self.t.setheading(rotB)
 
-    def asdC(self):
+    def asdC(self, fill:bool):
         self.t.penup()
         self.t.forward(80)
         self.t.setheading(-90)
         self.t.forward(20)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         xC = self.t.xcor()
         yC = self.t.ycor()
         rotC = self.t.heading()
@@ -90,17 +100,21 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(20)
         self.t.penup()
+        if fill:
+            self.t.end_fill()
         self.t.goto(xC, yC)
         self.t.pendown()
         self.t.setheading(rotC)
 
-    def asdD(self):
+    def asdD(self, fill:bool):
         self.t.penup()
         self.t.forward(80)
         self.t.forward(5)
         self.t.setheading(180)
         self.t.forward(15)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         xD = self.t.xcor()
         yD = self.t.ycor()
         rotD = self.t.heading()
@@ -120,17 +134,21 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(20)
         self.t.penup()
+        if fill:
+            self.t.end_fill()
         self.t.goto(xD, yD)
         self.t.pendown()
         self.t.setheading(rotD)
 
-    def asdE(self):
+    def asdE(self, fill:bool):
         self.t.penup()
         self.t.forward(80)
         self.t.forward(5)
         self.t.setheading(90)
         self.t.forward(15)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         xE = self.t.xcor()
         yE = self.t.ycor()
         rotE = self.t.heading()
@@ -150,17 +168,21 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(20)
         self.t.penup()
+        if fill:
+            self.t.end_fill()
         self.t.goto(xE, yE)
         self.t.pendown()
         self.t.setheading(rotE)
 
-    def asdF(self):
+    def asdF(self, fill:bool):
         self.t.penup()
         self.t.forward(20)
         self.t.forward(80)
         self.t.setheading(90)
         self.t.forward(-3)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         xF = self.t.xcor()
         yF = self.t.ycor()
         rotF = self.t.heading()
@@ -180,11 +202,13 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(20)
         self.t.penup()
+        if fill:
+            self.t.end_fill()
         self.t.goto(xF, yF)
         self.t.pendown()
         self.t.setheading(rotF)
 
-    def asdG(self):
+    def asdG(self, fill:bool):
         self.t.penup()
         self.t.setheading(0)
         self.t.forward(-5)
@@ -193,6 +217,8 @@ class Kattintgato:
         self.t.setheading(0)
         self.t.forward(20)
         self.t.pendown()
+        if fill:
+            self.t.begin_fill()
         xF = self.t.xcor()
         yF = self.t.ycor()
         rotF = self.t.heading()
@@ -212,6 +238,8 @@ class Kattintgato:
         self.t.left(45)
         self.t.forward(20)
         self.t.penup()
+        if fill:
+            self.t.end_fill()
         self.t.goto(xF, yF)
         self.t.pendown()
         self.t.setheading(rotF)
@@ -248,9 +276,7 @@ class Kattintgato:
         #self.asd()
 
     def nulla(self):
-        self.t.begin_fill()
-        self.asd()
-        self.t.end_fill()
+        self.asd(True)
         self.t.begin_fill()
         self.asdB()
         self.t.end_fill()
@@ -537,7 +563,8 @@ class Kattintgato:
         self.t.fillcolor("green")
         self.t._delay(0)
         self.t.speed(0)
-        self.second()
+        self.nulla()
+        #self.c.setOnSecondChangeListener(self.second)
         #self.asd()
         #self.asdB()
         #self.asdC()
