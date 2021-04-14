@@ -247,7 +247,7 @@ class Kattintgato:
         #self.t.right(135)
         #self.asd()
 
-    def nullaa(self):
+    def nulla(self):
         self.t.begin_fill()
         self.asd()
         self.t.end_fill()
@@ -268,7 +268,7 @@ class Kattintgato:
         self.t.end_fill()
         self.asdG()
 
-    def eggy(self):
+    def egy(self):
         self.asd()
         self.t.begin_fill()
         self.asdB()
@@ -281,7 +281,7 @@ class Kattintgato:
         self.asdF()
         self.asdG()
 
-    def kettoo(self):
+    def ketto(self):
         self.t.begin_fill()
         self.asd()
         self.t.end_fill()
@@ -300,7 +300,7 @@ class Kattintgato:
         self.asdG()
         self.t.end_fill()
 
-    def haroom(self):
+    def harom(self):
         self.t.begin_fill()
         self.asd()
         self.t.end_fill()
@@ -319,7 +319,7 @@ class Kattintgato:
         self.asdG()
         self.t.end_fill()
 
-    def neggy(self):
+    def negy(self):
         self.asd()
         self.t.begin_fill()
         self.asdB()
@@ -336,7 +336,7 @@ class Kattintgato:
         self.asdG()
         self.t.end_fill()
 
-    def ott(self):
+    def ot(self):
         self.t.begin_fill()
         self.asd()
         self.t.end_fill()
@@ -355,49 +355,11 @@ class Kattintgato:
         self.asdG()
         self.t.end_fill()
 
-    def haat(self):
+    def hat(self):
         self.t.begin_fill()
         self.asd()
         self.t.end_fill()
         self.asdB()
-        self.t.begin_fill()
-        self.asdC()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdD()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdE()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdF()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdG()
-        self.t.end_fill()
-
-    def heet(self):
-        self.t.begin_fill()
-        self.asd()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdB()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdC()
-        self.t.end_fill()
-        self.asdD()
-        self.asdE()
-        self.asdF()
-        self.asdG()
-
-    def nyolcc(self):
-        self.t.begin_fill()
-        self.asd()
-        self.t.end_fill()
-        self.t.begin_fill()
-        self.asdB()
-        self.t.end_fill()
         self.t.begin_fill()
         self.asdC()
         self.t.end_fill()
@@ -414,7 +376,45 @@ class Kattintgato:
         self.asdG()
         self.t.end_fill()
 
-    def kilencc(self):
+    def het(self):
+        self.t.begin_fill()
+        self.asd()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdB()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdC()
+        self.t.end_fill()
+        self.asdD()
+        self.asdE()
+        self.asdF()
+        self.asdG()
+
+    def nyolc(self):
+        self.t.begin_fill()
+        self.asd()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdB()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdC()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdD()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdE()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdF()
+        self.t.end_fill()
+        self.t.begin_fill()
+        self.asdG()
+        self.t.end_fill()
+
+    def kilenc(self):
         self.t.begin_fill()
         self.asd()
         self.t.end_fill()
@@ -441,93 +441,93 @@ class Kattintgato:
             self.t2.penup()
             self.t2.goto(250, -150)
             self.t2.pendown()
-            self.nulla2()
+            self.nulla()
         if self.c.rightNumber(self.c.sec()) == 1:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.egy2()
+            self.egy()
         if self.c.rightNumber(self.c.sec()) == 2:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.ketto2()
+            self.ketto()
         if self.c.rightNumber(self.c.sec()) == 3:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.harom2()
+            self.harom()
         if self.c.rightNumber(self.c.sec()) == 4:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.negy2()
+            self.negy()
         if self.c.rightNumber(self.c.sec()) == 5:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.ot2()
+            self.ot()
         if self.c.rightNumber(self.c.sec()) == 6:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.hat2()
+            self.hat()
         if self.c.rightNumber(self.c.sec()) == 7:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.het2()
+            self.het()
         if self.c.rightNumber(self.c.sec()) == 8:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.nyolc2()
+            self.nyolc()
         if self.c.rightNumber(self.c.sec()) == 9:
             self.t2.clear()
             self.t2.penup()
             self.t2.goto(150, -50)
             self.t2.pendown()
-            self.kilenc2()
+            self.kilenc()
 
     def secondleft(self):
         if self.c.leftNumber(self.c.sec()) == 0:
             self.t.clear()
-            self.nullaa()
+            self.nulla()
         if self.c.leftNumber(self.c.sec()) == 1:
             self.t.clear()
-            self.eggy()
+            self.egy()
         if self.c.leftNumber(self.c.sec()) == 2:
             self.t.clear()
-            self.kettoo()
+            self.ketto()
         if self.c.leftNumber(self.c.sec()) == 3:
             self.t.clear()
-            self.haroom()
+            self.harom()
         if self.c.leftNumber(self.c.sec()) == 4:
             self.t.clear()
-            self.neggy()
+            self.negy()
         if self.c.leftNumber(self.c.sec()) == 5:
             self.t.clear()
-            self.ott()
+            self.ot()
         if self.c.leftNumber(self.c.sec()) == 6:
             self.t.clear()
-            self.haat()
+            self.hat()
         if self.c.leftNumber(self.c.sec()) == 7:
             self.t.clear()
-            self.heet()
+            self.het()
         if self.c.leftNumber(self.c.sec()) == 8:
             self.t.clear()
-            self.nyolcc()
+            self.nyolc()
         if self.c.leftNumber(self.c.sec()) == 9:
             self.t.clear()
-            self.kilencc()
+            self.kilenc()
 
     def second(self):
         self.secondleft()
