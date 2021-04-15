@@ -10,11 +10,12 @@ class Clock:
     _dsp_min: int = -1
     _dsp_sec: int = -1
     _dsp_hour: int = -1
-    frequency: int = 100
+    frequency: int = 400
+    _enabled: int = 256
 
     def __init__(self, scr: TurtleScreen):
         self._scr = scr
-        self._handleEvents()
+        self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
 
     def UTC(self) -> str:
         return str(self._t.utcnow())
@@ -43,54 +44,66 @@ class Clock:
 
     def setOnSecondChangeListener(self, fun):
         self._secondChangeEvent = fun
-        fun()
 
     def setOnMinuteChangeListener(self, fun):
         self._minuteChangeEvent = fun
-        fun()
 
     def setOnHourChangeListener(self, fun):
         self._hourChangeEvent = fun
-        fun()
 
     def _handleEvents(self):
+        # print(self._enabled)
+        # print("---")
+
         self._t = datetime.now()
-        self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
 
-        dwn: int = 0
-        for t in self._scr.turtles():
-            if (t.isdown()):
-                dwn = dwn + 1
-
-        if self._dsp_sec != self.sec():
-            print("SecondChange")
-            self._dsp_sec = self.sec()
-            if self._secondChangeEvent != 0:
-                if dwn > 0:
-                    print("_secondChangeEvent: Jelenleg " + str(
-                        dwn) + " teknős van pendown állapotban. Használja a teknős penup() metódusát, mielőtt az eseményt meghívná. Az esemény addig zárolva marad, míg az összes teknős penup állapotba nem kerül.")
-                else:
-                    self._secondChangeEvent()
-
-        if self._dsp_min != self.min():
-            print("MinuteChange")
-            self._dsp_min = self.min()
+        if self._enabled == 256:
+            if self._hourChangeEvent != 0:
+                self._hourChangeEvent()
             if self._minuteChangeEvent != 0:
-                if dwn > 0:
-                    print("_minuteChangeEvent: Jelenleg " + str(
-                        dwn) + " teknős van pendown állapotban. Használja a teknős penup() metódusát, mielőtt az eseményt meghívná. Az esemény addig zárolva marad, míg az összes teknős penup állapotba nem kerül.")
-                else:
-                    self._minuteChangeEvent()
+                self._minuteChangeEvent()
+            if self._secondChangeEvent != 0:
+                self._secondChangeEvent()
+            self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
+            self._dsp_hour = self.hour24()
+            self._dsp_min = self.min()
+            self._dsp_sec = self.sec()
+            self._enabled = 0
+            return
+
+        if self._enabled != 0:
+            return
 
         if self._dsp_hour != self.hour24():
             print("HourChange")
             self._dsp_hour = self.hour24()
             if self._hourChangeEvent != 0:
-                if dwn > 0:
-                    print("_hourChangeEvent: Jelenleg " + str(
-                        dwn) + " teknős van pendown állapotban. Használja a teknős penup() metódusát, mielőtt az eseményt meghívná. Az esemény addig zárolva marad, míg az összes teknős penup állapotba nem kerül.")
-                else:
-                    self._hourChangeEvent()
+                self._enabled = self._enabled + 1
+                self._hourChangeEvent()
+                self._enabled = self._enabled - 1
+
+        self._t = datetime.now()
+        if self._dsp_min != self.min():
+            print("MinuteChange")
+            self._dsp_min = self.min()
+            if self._minuteChangeEvent != 0:
+                self._enabled = self._enabled + 2
+                self._minuteChangeEvent()
+                self._enabled = self._enabled - 2
+
+        self._t = datetime.now()
+        if self._dsp_sec != self.sec():
+            print("SecondChange")
+            self._dsp_sec = self.sec()
+            if self._secondChangeEvent != 0:
+                self._enabled = self._enabled + 4
+                print("Star")
+                self._secondChangeEvent()
+                print("Stop")
+                self._enabled = self._enabled - 4
+
+        self._scr.ontimer(fun=self._handleEvents, t=self.frequency)
+
 
 
     def leftNumber(self, num: int) -> int:
