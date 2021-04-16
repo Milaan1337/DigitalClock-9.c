@@ -8,6 +8,8 @@ class Kattintgato:
     t2 = Turtle()
     t3 = Turtle()
     t4 = Turtle()
+    t5 = Turtle()
+    t6 = Turtle()
     c = Clock(scr)
 
     def asd(self, fill:bool):
