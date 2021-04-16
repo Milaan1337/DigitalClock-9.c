@@ -6,6 +6,8 @@ class Kattintgato:
     scr = Screen()
     t = Turtle()
     t2 = Turtle()
+    t3 = Turtle()
+    t4 = Turtle()
     c = Clock(scr)
 
     def asd(self, fill:bool):
@@ -683,6 +685,31 @@ class Kattintgato:
         self.asdF1(True)
         self.asdG1(True)
 
+    def pont1(self):
+        self.t3.penup()
+        self.t3.goto(120, -50)
+        self.t3.pendown()
+        self.t3.circle(25)
+
+    def pont2(self):
+        self.t4.penup()
+        self.t4.goto(120, -200)
+        self.t4.pendown()
+        self.t4.circle(25)
+
+    def kettospont(self):
+        print("KETTOSPONT KESZ")
+        if self.c.rightNumber(self.c.sec()) % 2==0:
+            self.t3.clear()
+            self.t4.clear()
+        if self.c.rightNumber(self.c.sec()) % 2==1:
+            self.t3.begin_fill()
+            self.pont1()
+            self.t3.end_fill()
+            self.t4.begin_fill()
+            self.pont2()
+            self.t4.end_fill()
+
     def secondright(self):
         if self.c.rightNumber(self.c.sec()) == 0:
             self.t.clear()
@@ -808,12 +835,15 @@ class Kattintgato:
             self.kilencsecl()
 
     def second(self):
+        self.kettospont()
         self.secondleft()
         self.secondright()
 
     def __init__(self):
         self.t.fillcolor("green")
         self.t2.fillcolor("green")
+        self.t3.fillcolor("green")
+        self.t4.fillcolor("green")
         self.scr.bgcolor("black")
         self.t._delay(0)
         self.t.speed(0)
