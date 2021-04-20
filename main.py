@@ -486,7 +486,7 @@ class Kattintgato:
         self.t2.pendown()
         self.t2.setheading(rot2F)
 
-    def asd22(self, fill: bool):
+    def asd2(self, fill: bool):
         xA = self.t5.xcor()
         yA = self.t5.ycor()
         rot2A = self.t5.heading()
@@ -722,26 +722,7 @@ class Kattintgato:
         self.t5.pendown()
         self.t5.setheading(rot2F)
 
-    def asd2(self):
-        self.t2.fillcolor("green")
-        self.t2.begin_fill()
-        self.t2.penup()
-        self.t2.forward(80)
-        self.t2.pendown()
-        self.t2.left(135)
-        self.t2.forward(20)
-        self.t2.left(45)
-        self.t2.forward(60)
-        self.t2.left(45)
-        self.t2.forward(20)
-        self.t2.left(90)
-        self.t2.forward(20)
-        self.t2.left(45)
-        self.t2.forward(60)
-        self.t2.left(45)
-        self.t2.forward(20)
-        self.t2.end_fill()
-
+    #jobb oldali másodperc
     def nulla(self):
         self.asd(True)
         self.asdB(True)
@@ -832,7 +813,7 @@ class Kattintgato:
         self.asdF(True)
         self.asdG(True)
 
-
+    #bal oldali másodperc
     def nullasecl(self):
         self.asd1(True)
         self.asdB1(True)
@@ -922,6 +903,98 @@ class Kattintgato:
         self.asdE1(False)
         self.asdF1(True)
         self.asdG1(True)
+
+
+    #perc jobb oldali része
+    def nullaminr(self):
+        self.asd2(True)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(True)
+        self.asdE2(True)
+        self.asdF2(True)
+        self.asdG2(False)
+
+    def egyminr(self):
+        self.asd2(False)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(False)
+        self.asdE2(False)
+        self.asdF2(False)
+        self.asdG2(False)
+
+    def kettominr(self):
+        self.asd2(True)
+        self.asdB2(True)
+        self.asdC2(False)
+        self.asdD2(True)
+        self.asdE2(True)
+        self.asdF2(False)
+        self.asdG2(True)
+
+    def haromminr(self):
+        self.asd2(True)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(True)
+        self.asdE2(False)
+        self.asdF2(False)
+        self.asdG2(True)
+
+    def negyminr(self):
+        self.asd2(False)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(False)
+        self.asdE2(False)
+        self.asdF2(True)
+        self.asdG2(True)
+
+    def otminr(self):
+        self.asd2(True)
+        self.asdB2(False)
+        self.asdC2(True)
+        self.asdD2(True)
+        self.asdE2(False)
+        self.asdF2(True)
+        self.asdG2(True)
+
+    def hatminr(self):
+        self.asd2(True)
+        self.asdB2(False)
+        self.asdC2(True)
+        self.asdD2(True)
+        self.asdE2(True)
+        self.asdF2(True)
+        self.asdG2(True)
+
+    def hetminr(self):
+        self.asd2(True)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(False)
+        self.asdE2(False)
+        self.asdF2(False)
+        self.asdG2(False)
+
+    def nyolcminr(self):
+        self.asd2(True)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(True)
+        self.asdE2(True)
+        self.asdF2(True)
+        self.asdG2(True)
+
+    def kilencminr(self):
+        self.asd2(True)
+        self.asdB2(True)
+        self.asdC2(True)
+        self.asdD2(True)
+        self.asdE2(False)
+        self.asdF2(True)
+        self.asdG2(True)
 
     def pont1(self):
         self.t3.penup()
@@ -1077,14 +1150,85 @@ class Kattintgato:
         self.secondleft()
         self.secondright()
 
+    def minuteright(self):
+        if self.c.rightNumber(self.c.min()) == 0:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.nullaminr()
+        if self.c.rightNumber(self.c.min()) == 1:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.egyminr()
+        if self.c.rightNumber(self.c.min()) == 2:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.kettominr()
+        if self.c.rightNumber(self.c.min()) == 3:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.haromminr()
+        if self.c.rightNumber(self.c.min()) == 4:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.negyminr()
+        if self.c.rightNumber(self.c.min()) == 5:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.otminr()
+        if self.c.rightNumber(self.c.min()) == 6:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.hatminr()
+        if self.c.rightNumber(self.c.min()) == 7:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.hetminr()
+        if self.c.rightNumber(self.c.min()) == 8:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.nyolcminr()
+        if self.c.rightNumber(self.c.min()) == 9:
+            self.t5.clear()
+            self.t5.penup()
+            self.t5.goto(-50, 0)
+            self.t5.pendown()
+            self.kilencminr()
+
+    def minute(self):
+        self.minuteright()
+        print(self.c.leftNumber(self.c.min()))
+        print(self.c.rightNumber(self.c.min()))
+
+
     def __init__(self):
         self.t.fillcolor("green")
         self.t2.fillcolor("green")
         self.t3.fillcolor("green")
         self.t4.fillcolor("green")
+        self.t5.fillcolor("green")
         self.scr.bgcolor("black")
         self.t._delay(0)
         self.t.speed(0)
+        self.scr.setup(1600,900)
+        self.c.setOnMinuteChangeListener(self.minute)
         self.c.setOnSecondChangeListener(self.second)
         self.scr.mainloop()
 
