@@ -10,6 +10,8 @@ class Kattintgato:
     t4 = Turtle()
     t5 = Turtle()
     t6 = Turtle()
+    t7 = Turtle()
+    t8 = Turtle()
     c = Clock(scr)
 
     def asd(self, fill:bool):
@@ -723,7 +725,7 @@ class Kattintgato:
         self.t5.setheading(rot2F)
 
 
-    def asd23(self, fill: bool):
+    def asd3(self, fill: bool):
         xA = self.t6.xcor()
         yA = self.t6.ycor()
         rot2A = self.t6.heading()
@@ -1235,7 +1237,7 @@ class Kattintgato:
 
     #perc jobb oldali része
     def nullaminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(True)
@@ -1244,7 +1246,7 @@ class Kattintgato:
         self.asdG3(False)
 
     def egyminl(self):
-        self.asd23(False)
+        self.asd3(False)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(False)
@@ -1253,7 +1255,7 @@ class Kattintgato:
         self.asdG3(False)
 
     def kettominl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(True)
         self.asdC3(False)
         self.asdD3(True)
@@ -1262,7 +1264,7 @@ class Kattintgato:
         self.asdG3(True)
 
     def haromminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(True)
@@ -1271,7 +1273,7 @@ class Kattintgato:
         self.asdG3(True)
 
     def negyminl(self):
-        self.asd23(False)
+        self.asd3(False)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(False)
@@ -1280,7 +1282,7 @@ class Kattintgato:
         self.asdG3(True)
 
     def otminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(False)
         self.asdC3(True)
         self.asdD3(True)
@@ -1289,7 +1291,7 @@ class Kattintgato:
         self.asdG3(True)
 
     def hatminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(False)
         self.asdC3(True)
         self.asdD3(True)
@@ -1298,7 +1300,7 @@ class Kattintgato:
         self.asdG3(True)
 
     def hetminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(False)
@@ -1307,7 +1309,7 @@ class Kattintgato:
         self.asdG3(False)
 
     def nyolcminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(True)
@@ -1316,7 +1318,7 @@ class Kattintgato:
         self.asdG3(True)
 
     def kilencminl(self):
-        self.asd23(True)
+        self.asd3(True)
         self.asdB3(True)
         self.asdC3(True)
         self.asdD3(True)
@@ -1336,6 +1338,18 @@ class Kattintgato:
         self.t4.pendown()
         self.t4.circle(25)
 
+    def pont11(self):
+        self.t7.penup()
+        self.t7.goto(-200, -50)
+        self.t7.pendown()
+        self.t7.circle(25)
+
+    def pont22(self):
+        self.t8.penup()
+        self.t8.goto(-200, -200)
+        self.t8.pendown()
+        self.t8.circle(25)
+
     def kettospont(self):
         print("KETTOSPONT KESZ")
         if self.c.rightNumber(self.c.sec()) % 2==0:
@@ -1348,6 +1362,19 @@ class Kattintgato:
             self.t4.begin_fill()
             self.pont2()
             self.t4.end_fill()
+
+    def kettospont2(self):
+        print("KETTOSPONT2 KESZ")
+        if self.c.rightNumber(self.c.sec()) % 2==0:
+            self.t7.clear()
+            self.t8.clear()
+        if self.c.rightNumber(self.c.sec()) % 2==1:
+            self.t7.begin_fill()
+            self.pont11()
+            self.t7.end_fill()
+            self.t8.begin_fill()
+            self.pont22()
+            self.t8.end_fill()
 
     def secondright(self):
         if self.c.rightNumber(self.c.sec()) == 0:
@@ -1475,6 +1502,7 @@ class Kattintgato:
 
     def second(self):
         self.kettospont()
+        self.kettospont2()
         self.secondleft()
         self.secondright()
 
@@ -1540,18 +1568,82 @@ class Kattintgato:
             self.t5.pendown()
             self.kilencminr()
 
+    def minuteleft(self):
+        if self.c.leftNumber(self.c.min()) == 0:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.nullaminl()
+        if self.c.leftNumber(self.c.min()) == 1:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.egyminl()
+        if self.c.leftNumber(self.c.min()) == 2:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.kettominl()
+        if self.c.leftNumber(self.c.min()) == 3:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.haromminl()
+        if self.c.leftNumber(self.c.min()) == 4:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.negyminl()
+        if self.c.leftNumber(self.c.min()) == 5:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.otminl()
+        if self.c.leftNumber(self.c.min()) == 6:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.hatminl()
+        if self.c.leftNumber(self.c.min()) == 7:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.hetminl()
+        if self.c.leftNumber(self.c.min()) == 8:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.nyolcminl()
+        if self.c.leftNumber(self.c.min()) == 9:
+            self.t6.clear()
+            self.t6.penup()
+            self.t6.goto(-100, 0)
+            self.t6.pendown()
+            self.kilencminl()
+
     def minute(self):
+        self.minuteleft()
         self.minuteright()
-        print(self.c.leftNumber(self.c.min()))
-        print(self.c.rightNumber(self.c.min()))
 
 
     def __init__(self):
-        self.t.fillcolor("green")
-        self.t2.fillcolor("green")
-        self.t3.fillcolor("green")
-        self.t4.fillcolor("green")
-        self.t5.fillcolor("green")
+        self.t.fillcolor("orange")
+        self.t2.fillcolor("orange")
+        self.t3.fillcolor("orange")
+        self.t4.fillcolor("orange")
+        self.t5.fillcolor("orange")
+        self.t6.fillcolor("orange")
+        self.t7.fillcolor("orange")
+        self.t8.fillcolor("orange")
         self.scr.bgcolor("black")
         self.t._delay(0)
         self.t.speed(0)
