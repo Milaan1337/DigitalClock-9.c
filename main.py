@@ -2291,6 +2291,133 @@ class Kattintgato:
         self.minuteleft()
         self.minuteright()
 
+    def hourright(self):
+        if self.c.rightNumber(self.c.hour24()) == 0:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.nullahourr()
+        if self.c.rightNumber(self.c.hour24()) == 1:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.egyhourr()
+        if self.c.rightNumber(self.c.hour24()) == 2:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.kettohourr()
+        if self.c.rightNumber(self.c.hour24()) == 3:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.haromhourr()
+        if self.c.rightNumber(self.c.hour24()) == 4:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.negyhourr()
+        if self.c.rightNumber(self.c.hour24()) == 5:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.othourr()
+        if self.c.rightNumber(self.c.hour24()) == 6:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.hathourr()
+        if self.c.rightNumber(self.c.hour24()) == 7:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.hethourr()
+        if self.c.rightNumber(self.c.hour24()) == 8:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.nyolchourr()
+        if self.c.rightNumber(self.c.hour24()) == 9:
+            self.t10.clear()
+            self.t10.penup()
+            self.t10.goto(-350, 0)
+            self.t10.pendown()
+            self.kilenchourr()
+
+    def hourleft(self):
+        if self.c.leftNumber(self.c.hour24()) == 0:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.nullahourl()
+        if self.c.leftNumber(self.c.hour24()) == 1:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.egyhourl()
+        if self.c.leftNumber(self.c.hour24()) == 2:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.kettohourl()
+        if self.c.leftNumber(self.c.hour24()) == 3:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.haromhourl()
+        if self.c.leftNumber(self.c.hour24()) == 4:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.negyhourl()
+        if self.c.leftNumber(self.c.hour24()) == 5:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.othourl()
+        if self.c.leftNumber(self.c.hour24()) == 6:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.hathourl()
+        if self.c.leftNumber(self.c.hour24()) == 7:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.hethourl()
+        if self.c.leftNumber(self.c.hour24()) == 8:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.nyolchourl()
+        if self.c.leftNumber(self.c.hour24()) == 9:
+            self.t9.clear()
+            self.t9.penup()
+            self.t9.goto(-500, 0)
+            self.t9.pendown()
+            self.kilenchourl()
+
+    def hour(self):
+        self.hourleft()
+        self.hourright()
 
     def __init__(self):
         self.t.fillcolor("orange")
@@ -2301,10 +2428,13 @@ class Kattintgato:
         self.t6.fillcolor("orange")
         self.t7.fillcolor("orange")
         self.t8.fillcolor("orange")
+        self.t9.fillcolor("orange")
+        self.t10.fillcolor("orange")
         self.scr.bgcolor("black")
         self.t._delay(0)
         self.t.speed(0)
         self.scr.setup(1600,900)
+        self.c.setOnHourChangeListener(self.hour)
         self.c.setOnMinuteChangeListener(self.minute)
         self.c.setOnSecondChangeListener(self.second)
         self.scr.mainloop()
