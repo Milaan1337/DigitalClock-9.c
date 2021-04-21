@@ -40,7 +40,7 @@ class Clock:
         return int(self._t.minute.real)
 
     def sec(self) -> int:
-        return int(self._t.second.real)
+        return (int(self._t.second.real) + 2)%60
 
     def setOnSecondChangeListener(self, fun):
         self._secondChangeEvent = fun

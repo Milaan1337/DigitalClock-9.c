@@ -14,7 +14,8 @@ class Kattintgato:
     t8 = Turtle()
     t9 = Turtle()
     t10 = Turtle()
-    c = Clock(scr)
+    t11 = Turtle()
+    c : Clock
 
     def asd(self, fill:bool):
         xA = self.t.xcor()
@@ -1435,6 +1436,16 @@ class Kattintgato:
         self.t10.pendown()
         self.t10.setheading(rot2F)
 
+    def szel(self):
+        self.t11.penup()
+        self.t11.goto(-550, 100)
+        self.t11.pendown()
+        self.t11.width(15)
+        self.t11.color('yellow')
+        self.t11.goto(600, 100)
+        self.t11.goto(600, -300)
+        self.t11.goto(-550, -300)
+        self.t11.goto(-550, 100)
 
     #jobb oldali másodperc
     def nulla(self):
@@ -2430,10 +2441,23 @@ class Kattintgato:
         self.t8.fillcolor("orange")
         self.t9.fillcolor("orange")
         self.t10.fillcolor("orange")
+        self.t11.fillcolor("red")
         self.scr.bgcolor("black")
         self.t._delay(0)
-        self.t.speed(0)
+        self.t2._delay(0)
+        self.t3._delay(0)
+        self.t4._delay(0)
+        self.t5._delay(0)
+        self.t6._delay(0)
+        self.t7._delay(0)
+        self.t8._delay(0)
+        self.t9._delay(0)
+        self.t10._delay(0)
+        self.t11._delay(0)
+        self.t6.speed(0)
         self.scr.setup(1600,900)
+        self.szel()
+        self.c = Clock(self.scr)
         self.c.setOnHourChangeListener(self.hour)
         self.c.setOnMinuteChangeListener(self.minute)
         self.c.setOnSecondChangeListener(self.second)
