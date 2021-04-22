@@ -1438,14 +1438,20 @@ class Kattintgato:
 
     def szel(self):
         self.t11.penup()
-        self.t11.goto(-550, 100)
+        self.t11.goto(-600, 100)
         self.t11.pendown()
-        self.t11.width(15)
+        self.t11.width(20)
         self.t11.color('yellow')
         self.t11.goto(600, 100)
         self.t11.goto(600, -300)
-        self.t11.goto(-550, -300)
-        self.t11.goto(-550, 100)
+        self.t11.goto(-600, -300)
+        self.t11.goto(-600, 100)
+        self.t11.goto(-500, 200)
+        self.t11.goto(700, 200)
+        self.t11.goto(600, 100)
+        self.t11.goto(700, 200)
+        self.t11.goto(700, -200)
+        self.t11.goto(600, -300)
 
     #jobb oldali másodperc
     def nulla(self):
@@ -2441,8 +2447,8 @@ class Kattintgato:
         self.t8.fillcolor("orange")
         self.t9.fillcolor("orange")
         self.t10.fillcolor("orange")
-        self.t11.fillcolor("red")
         self.scr.bgcolor("black")
+        #delay
         self.t._delay(0)
         self.t2._delay(0)
         self.t3._delay(0)
@@ -2454,7 +2460,18 @@ class Kattintgato:
         self.t9._delay(0)
         self.t10._delay(0)
         self.t11._delay(0)
+        #speed
+        self.t.speed(0)
+        self.t2.speed(0)
+        self.t3.speed(0)
+        self.t4.speed(0)
+        self.t5.speed(0)
         self.t6.speed(0)
+        self.t7.speed(0)
+        self.t8.speed(0)
+        self.t9.speed(0)
+        self.t10.speed(0)
+        self.t11.speed(0)
         self.scr.setup(1600,900)
         self.szel()
         self.c = Clock(self.scr)
