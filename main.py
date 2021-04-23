@@ -17,7 +17,7 @@ class Kattintgato:
     t11 = Turtle()
     c : Clock
 
-    def asd(self, fill:bool):
+    def asd(self, color):
         xA = self.t.xcor()
         yA = self.t.ycor()
         rotA = self.t.heading()
@@ -28,8 +28,8 @@ class Kattintgato:
         self.t.left(90)
         self.t.forward(80)
         self.t.pendown()
-        if fill:
-            self.t.begin_fill()
+        self.t.fillcolor(color)
+        self.t.begin_fill()
         self.t.left(135)
         self.t.forward(20)
         self.t.left(45)
@@ -42,8 +42,7 @@ class Kattintgato:
         self.t.forward(60)
         self.t.left(45)
         self.t.forward(20)
-        if fill:
-            self.t.end_fill()
+        self.t.end_fill()
         self.t.penup()
         self.t.goto(xA, yA)
         self.t.setheading(rotA)
@@ -1458,7 +1457,7 @@ class Kattintgato:
 
     #jobb oldali másodperc
     def nulla(self):
-        self.asd(True)
+        self.asd("orange")  #ez true volt     #ha true volt akkor narancs legyen
         self.asdB(True)
         self.asdC(True)
         self.asdD(True)
@@ -1467,7 +1466,7 @@ class Kattintgato:
         self.asdG(False)
 
     def egy(self):
-        self.asd(False)
+        self.asd((1, 1, 1)) #ez false volt ha false akkor egy sötétebb narancs legyen
         self.asdB(True)
         self.asdC(True)
         self.asdD(False)
@@ -1476,7 +1475,7 @@ class Kattintgato:
         self.asdG(False)
 
     def ketto(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(True)
         self.asdC(False)
         self.asdD(True)
@@ -1485,7 +1484,7 @@ class Kattintgato:
         self.asdG(True)
 
     def harom(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(True)
         self.asdC(True)
         self.asdD(True)
@@ -1494,7 +1493,7 @@ class Kattintgato:
         self.asdG(True)
 
     def negy(self):
-        self.asd(False)
+        self.asd("darkorange")
         self.asdB(True)
         self.asdC(True)
         self.asdD(False)
@@ -1503,7 +1502,7 @@ class Kattintgato:
         self.asdG(True)
 
     def ot(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(False)
         self.asdC(True)
         self.asdD(True)
@@ -1512,7 +1511,7 @@ class Kattintgato:
         self.asdG(True)
 
     def hat(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(False)
         self.asdC(True)
         self.asdD(True)
@@ -1521,7 +1520,7 @@ class Kattintgato:
         self.asdG(True)
 
     def het(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(True)
         self.asdC(True)
         self.asdD(False)
@@ -1530,7 +1529,7 @@ class Kattintgato:
         self.asdG(False)
 
     def nyolc(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(True)
         self.asdC(True)
         self.asdD(True)
@@ -1539,7 +1538,7 @@ class Kattintgato:
         self.asdG(True)
 
     def kilenc(self):
-        self.asd(True)
+        self.asd("orange")
         self.asdB(True)
         self.asdC(True)
         self.asdD(True)
