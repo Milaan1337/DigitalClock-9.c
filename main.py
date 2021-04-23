@@ -1441,7 +1441,9 @@ class Kattintgato:
         self.t11.goto(-600, 100)
         self.t11.pendown()
         self.t11.width(20)
-        self.t11.color('yellow')
+        self.t11.color('blue')
+        self.t11.fillcolor("black")
+        self.t11.begin_fill()
         self.t11.goto(600, 100)
         self.t11.goto(600, -300)
         self.t11.goto(-600, -300)
@@ -1452,6 +1454,7 @@ class Kattintgato:
         self.t11.goto(700, 200)
         self.t11.goto(700, -200)
         self.t11.goto(600, -300)
+        self.t11.end_fill()
 
     #jobb oldali másodperc
     def nulla(self):
@@ -2155,24 +2158,6 @@ class Kattintgato:
             self.t2.goto(300, 0)
             self.t2.pendown()
             self.hatsecl()
-        if self.c.leftNumber(self.c.sec()) == 7:
-            self.t2.clear()
-            self.t2.penup()
-            self.t2.goto(300, 0)
-            self.t2.pendown()
-            self.hetsecl()
-        if self.c.leftNumber(self.c.sec()) == 8:
-            self.t2.clear()
-            self.t2.penup()
-            self.t2.goto(300, 0)
-            self.t2.pendown()
-            self.nyolcsecl()
-        if self.c.leftNumber(self.c.sec()) == 9:
-            self.t2.clear()
-            self.t2.penup()
-            self.t2.goto(300, 0)
-            self.t2.pendown()
-            self.kilencsecl()
 
     def second(self):
         self.kettospont()
@@ -2447,7 +2432,7 @@ class Kattintgato:
         self.t8.fillcolor("orange")
         self.t9.fillcolor("orange")
         self.t10.fillcolor("orange")
-        self.scr.bgcolor("black")
+        self.scr.bgcolor("white")
         #delay
         self.t._delay(0)
         self.t2._delay(0)
