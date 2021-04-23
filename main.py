@@ -1512,7 +1512,7 @@ class Kattintgato:
         self.asdG(True)
 
     def hat(self):
-        self.asd(False)
+        self.asd(True)
         self.asdB(False)
         self.asdC(True)
         self.asdD(True)
@@ -2433,6 +2433,21 @@ class Kattintgato:
         self.t9.fillcolor("orange")
         self.t10.fillcolor("orange")
         self.scr.bgcolor("white")
+
+
+        self.t.hideturtle()
+        self.t2.hideturtle()
+        self.t3.hideturtle()
+        self.t4.hideturtle()
+        self.t5.hideturtle()
+        self.t6.hideturtle()
+        self.t7.hideturtle()
+        self.t8.hideturtle()
+        self.t9.hideturtle()
+        self.t10.hideturtle()
+
+
+
         #delay
         self.t._delay(0)
         self.t2._delay(0)
