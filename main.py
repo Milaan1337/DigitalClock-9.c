@@ -1441,7 +1441,7 @@ class Kattintgato:
         self.t11.goto(-600, 100)
         self.t11.pendown()
         self.t11.width(20)
-        self.t11.color('blue')
+        self.t11.color('grey')
         self.t11.fillcolor("black")
         self.t11.begin_fill()
         self.t11.goto(600, 100)
